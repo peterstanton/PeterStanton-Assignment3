@@ -3,7 +3,7 @@ package com.example.peter.peterstanton_assignment3;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.content.Intent;
+import android.content.*;
 import android.os.Bundle;
 import android.provider.AlarmClock;
 import android.support.design.widget.FloatingActionButton;
@@ -33,17 +33,14 @@ public class AlarmActivity extends AppCompatActivity {
         Intent intent = new Intent(AlarmClock.ACTION_SET_ALARM)
                 .putExtra(AlarmClock.EXTRA_HOUR, hour)
                 .putExtra(AlarmClock.EXTRA_MINUTES, minutes);
-        //.putExtra(AlarmClock.EXTRA_LENGTH, duration);
-
         if(intent.resolveActivity(getPackageManager()) != null) {
-            //startActivity(intent);
-            startActivityForResult(intent, 0);
-            //finish();
+            startActivityForResult(intent,0);
          }
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        int x = 0;
+      int x = 0;
+      finish();
     }
 }

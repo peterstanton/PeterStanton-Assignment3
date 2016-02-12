@@ -24,7 +24,7 @@ public class PhoneActivity extends AppCompatActivity {
         Intent intent = new Intent (Intent.ACTION_DIAL);
 
         EditText phoneEditText = (EditText) findViewById(R.id.phoneNumber);
-        int inputNumber = Integer.parseInt(phoneEditText.toString());
+        int inputNumber = Integer.parseInt(phoneEditText.getText().toString());
         intent.setData(Uri.parse("tel:" + inputNumber));
         if (intent.resolveActivity(getPackageManager()) != null)
         {
@@ -35,7 +35,8 @@ public class PhoneActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        int x = 0;
+
+        finish();
     }
 
 }

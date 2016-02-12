@@ -32,8 +32,8 @@ public class TimerActivity extends AppCompatActivity {
 
         // create an implicit intent with extras for a count down timer
         Intent intent = new Intent(AlarmClock.ACTION_SET_TIMER)
+                .putExtra(AlarmClock.EXTRA_LENGTH, duration)
                 .putExtra(AlarmClock.EXTRA_MESSAGE, message);
-        //.putExtra(AlarmClock.EXTRA_LENGTH, duration);
 
         if(intent.resolveActivity(getPackageManager()) != null) {
             //startActivity(intent);
@@ -43,8 +43,9 @@ public class TimerActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        int x = 0;
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        finish();
     }
 
 }
