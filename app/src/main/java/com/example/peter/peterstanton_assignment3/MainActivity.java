@@ -1,5 +1,6 @@
 package com.example.peter.peterstanton_assignment3;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,6 +11,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
+
+    public final static int TIMER_REQUEST_CODE = 0;
+    public final static int ALARM_REQUEST_CODE = 1;
+    public final static int PHONE_REQUEST_CODE = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,5 +53,26 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void toAlarm (View view)
+    {
+        //alarm intent here
+        Intent intent = new Intent (this, AlarmActivity.class);
+        startActivityForResult(intent, ALARM_REQUEST_CODE);
+    }
+
+    public void toTimer (View view)
+    {
+        //timer intent here
+        Intent intent = new Intent (this, TimerActivity.class);
+        startActivityForResult(intent, TIMER_REQUEST_CODE);
+    }
+
+    public void toPhone (View view)
+    {
+        //phone intent here
+        Intent intent = new Intent (this, PhoneActivity.class);
+        startActivityForResult(intent, PHONE_REQUEST_CODE);
     }
 }

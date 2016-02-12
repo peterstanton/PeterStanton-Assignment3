@@ -15,5 +15,38 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Hello World!"
+        android:id="@+id/textView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alarm"
+        android:id="@+id/alarmButton"
+        android:layout_marginTop="89dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:onClick="toAlarm" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Timer"
+        android:id="@+id/timerButton"
+        android:layout_marginTop="62dp"
+        android:layout_below="@+id/alarmButton"
+        android:layout_alignLeft="@+id/alarmButton"
+        android:layout_alignStart="@+id/alarmButton"
+        android:onClick="toTimer" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone"
+        android:id="@+id/phoneButton"
+        android:layout_marginTop="53dp"
+        android:layout_below="@+id/timerButton"
+        android:layout_alignLeft="@+id/timerButton"
+        android:layout_alignStart="@+id/timerButton"
+        android:onClick="toPhone"/>
 </RelativeLayout>
