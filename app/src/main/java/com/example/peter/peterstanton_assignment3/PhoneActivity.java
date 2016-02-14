@@ -21,16 +21,17 @@ public class PhoneActivity extends AppCompatActivity {
 
     public void dialNumber (View view)
     {
-        Intent intent = new Intent (Intent.ACTION_DIAL);
-
+        Intent intent = new Intent (Intent.ACTION_CALL);
+        //create the intent and parse the data in the Uri format.
         EditText phoneEditText = (EditText) findViewById(R.id.phoneNumber);
-        int inputNumber = Integer.parseInt(phoneEditText.getText().toString());
-        intent.setData(Uri.parse("tel:" + inputNumber));
+        //long inputNumber = Long.parseLong(phoneEditText.getText().toString()); deprecated
+
+        intent.setData(Uri.parse("tel:" + phoneEditText.getText().toString()));
+        //intent.setData(Uri.parse("tel:" + inputNumber)); deprecated
         if (intent.resolveActivity(getPackageManager()) != null)
         {
             startActivityForResult(intent, 0);
         }
-
     }
 
     public void Cancel (View view)
@@ -43,5 +44,4 @@ public class PhoneActivity extends AppCompatActivity {
     {
         int x = 0;
     }
-
 }

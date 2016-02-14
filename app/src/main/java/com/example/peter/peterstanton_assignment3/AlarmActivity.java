@@ -29,7 +29,7 @@ public class AlarmActivity extends AppCompatActivity {
         EditText minutesEditText = (EditText) findViewById(R.id.minutesEntry);
         int minutes = Integer.parseInt(minutesEditText.getText().toString());
 
-        // create an implicit intent with extras for a count down timer
+        // create an implicit intent with extras for the hour and minute in a 24-hour format.
         Intent intent = new Intent(AlarmClock.ACTION_SET_ALARM)
                 .putExtra(AlarmClock.EXTRA_HOUR, hour)
                 .putExtra(AlarmClock.EXTRA_MINUTES, minutes);
