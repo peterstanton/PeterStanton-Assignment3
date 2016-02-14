@@ -36,16 +36,19 @@ public class TimerActivity extends AppCompatActivity {
                 .putExtra(AlarmClock.EXTRA_MESSAGE, message);
 
         if(intent.resolveActivity(getPackageManager()) != null) {
-            //startActivity(intent);
             startActivityForResult(intent, 0);
-            //finish();
         }
+    }
+
+    public void Cancel (View view)
+    {
+        finish();
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
-        finish();
+        int x = 0;
     }
 
 }

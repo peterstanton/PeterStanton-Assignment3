@@ -49,4 +49,5 @@
         android:layout_alignLeft="@+id/timerButton"
         android:layout_alignStart="@+id/timerButton"
         android:onClick="toPhone"/>
+
 </RelativeLayout>

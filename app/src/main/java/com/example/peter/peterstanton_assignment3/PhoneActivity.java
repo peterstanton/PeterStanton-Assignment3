@@ -33,10 +33,15 @@ public class PhoneActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
+    public void Cancel (View view)
+    {
         finish();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        int x = 0;
     }
 
 }

@@ -38,9 +38,14 @@ public class AlarmActivity extends AppCompatActivity {
          }
     }
 
+    public void Cancel (View view)
+    {
+        finish();
+    }
+
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
       int x = 0;
-      finish();
     }
 }
