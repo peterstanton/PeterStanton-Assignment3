@@ -7,34 +7,17 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.peter.peterstanton_assignment3.TimerActivity">
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/timeEntry"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
-        android:hint="Time entry here (in seconds)" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/messageEntry"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:hint="Your message here" />
+    tools:context="com.example.peter.peterstanton_assignment3.ContactsActivity">
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Set Timer"
-        android:id="@+id/callTimer"
-        android:layout_below="@+id/messageEntry"
+        android:text="Select Contact"
+        android:id="@+id/contactsButton"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="84dp"
-        android:onClick="summonTimer"/>
+        android:layout_marginTop="132dp"
+        android:onClick="summonContacts"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -43,5 +26,6 @@
         android:id="@+id/cancelButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="109dp"
         android:onClick="Cancel"/>
 </RelativeLayout>

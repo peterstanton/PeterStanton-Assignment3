@@ -15,7 +15,7 @@
         android:id="@+id/hoursEntry"
         android:layout_alignParentTop="true"
         android:layout_marginTop="93dp"
-        android:text="Enter hour here" />
+        android:hint="Enter hour here" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -26,7 +26,7 @@
         android:layout_toEndOf="@+id/hoursEntry"
         android:layout_marginLeft="29dp"
         android:layout_marginStart="29dp"
-        android:text="Enter minutes here" />
+        android:hint="Enter minutes here" />
 
     <Button
         android:layout_width="wrap_content"

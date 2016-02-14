@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     public final static int TIMER_REQUEST_CODE = 0;
     public final static int ALARM_REQUEST_CODE = 1;
     public final static int PHONE_REQUEST_CODE = 2;
-    public final static int NOTE_REQUEST_CODE = 3;
+    public final static int CONTACTS_REQUEST_CODE = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +75,13 @@ public class MainActivity extends AppCompatActivity {
         //phone intent here
         Intent intent = new Intent (this, PhoneActivity.class);
         startActivityForResult(intent, PHONE_REQUEST_CODE);
+    }
+
+    public void toContacts (View view)
+    {
+        //contacts intent here
+        Intent intent = new Intent (this, ContactsActivity.class);
+        startActivityForResult(intent, CONTACTS_REQUEST_CODE);
     }
 
     @Override

@@ -26,7 +26,8 @@ public class PhoneActivity extends AppCompatActivity {
         EditText phoneEditText = (EditText) findViewById(R.id.phoneNumber);
         //long inputNumber = Long.parseLong(phoneEditText.getText().toString()); deprecated
 
-        intent.setData(Uri.parse("tel:" + phoneEditText.getText().toString()));
+        String inputNumber = phoneEditText.getText().toString();
+        intent.setData(Uri.parse("tel:" + inputNumber));
         //intent.setData(Uri.parse("tel:" + inputNumber)); deprecated
         if (intent.resolveActivity(getPackageManager()) != null)
         {
